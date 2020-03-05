@@ -29,8 +29,7 @@ add_action('wp_enqueue_scripts', 'load_js');
 // Theme Options
 add_theme_support('menus'); // Ajoute l'option "Menus" dans Wordpress -> Apparence
 add_theme_support('post-thumbnails'); // Ajoute l'option "Image mise en avant" lors de l'édition d'un article
-
-
+add_theme_support('widgets');// Ajoute l'option "Widgets" dans Wordpress -> Apparence
 
 
 // Menus
@@ -50,3 +49,11 @@ register_nav_menus(
 // Custom Image Sizes
 add_image_size('blog-large', 800, 400, false); // Forcer la dimenssion d'une image en gardants les proportions "scale"
 add_image_size('blog-small', 300, 200, true); // Forcer la dimenssion par recadrage d'une image  “hard crop”
+
+// Register Sidebars
+function my_sidebars() {
+
+
+
+}
+add_action('widgets_init', 'my_sidebars');
