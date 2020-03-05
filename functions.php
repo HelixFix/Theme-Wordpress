@@ -48,4 +48,5 @@ register_nav_menus(
 
 
 // Custom Image Sizes
-add_image_size('blog-large, 800, 400, true'); // Forcer la dimenssion d'une image lors de l'ajout dans wordpress
+add_image_size('blog-large', 800, 400, false); // Forcer la dimenssion d'une image 
+add_image_size('blog-small', 300, 200, true); // Forcer la dimenssion d'une image + “hard crop”

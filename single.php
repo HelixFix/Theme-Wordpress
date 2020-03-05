@@ -6,7 +6,7 @@
 
         <?php if(has_post_thumbnail):?><!--Si possède une image-->
 
-                <img src="<?php the_post_thumbnail_url();?>" alt="<?php the_title();?>" class="img-fluid mb-3 img-thumbnail"><!--Affiche l'image-->
+                <img src="<?php the_post_thumbnail_url('blog-large');?>" alt="<?php the_title();?>" class="img-fluid mb-3 img-thumbnail"><!--Affiche l'image-->
 
         <?php endif;?>    
 
