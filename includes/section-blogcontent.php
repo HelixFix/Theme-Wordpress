@@ -41,6 +41,6 @@
                 </a>
         <?php endforeach; ?>
 
-        
+        <?php comments_template();?><!--Affiche emplacement de commmentaire-->
 
 <?php endwhile;else : endif; ?><!--Fin boucle WordPress-->

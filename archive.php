@@ -10,6 +10,8 @@
 
         <?php previous_posts_link();?> <!--Affiche lien suivant, ne pas oublier de definir le nombre d'article par page dans wordpress-->
         <?php next_posts_link();?>
+
+       
     </div>
 </section> 
 
