@@ -4,11 +4,10 @@
         <p><?php echo get_the_date('l j F, Y'); ?></p>
         <!--Date de création ('d/m/Y h:i:s')-->
 
-        <?php the_content(); ?>
-        <!--Le contenu-->
+        <?php the_content(); ?><!--Le contenu-->
 
-        <!--L'auteur==admin-->
-        <!--<?php the_author() ?>-->
+        
+        <!--<?php the_author() ?>--><!--L'auteur==admin-->
 
         <?php
         $fname = get_the_author_meta('first_name'); //Prénom auteur
@@ -16,18 +15,20 @@
         //echo $fname . ' ' . $lname; <!--Nom+Prénom-->
         ?>
 
-        <p>&#201;cris par <?php echo $fname; ?> <?php echo $lname; ?>
-            <!--Nom+Prénom-->
+        <p>&#201;cris par <?php echo $fname; ?> <?php echo $lname; ?><!--Nom+Prénom-->
         </p>
 
         <?php
         $tags = get_the_tags();
-        foreach ($tags as $tag) : ?>
-            <!--Pour chaque contenu qui possède un tag-->
+        foreach ($tags as $tag) : ?><!--Pour chaque contenu qui possède un tag-->
 
-            <?php echo get_tag_link($tag->term_id); //Récupérer le lien du tag
 
-            ?>
+            <!--<?php echo get_tag_link($tag->term_id);?>--> <!--Récupérer le lien du tag-->
+            <a href="<?php echo get_tag_link($tag->term_id);?>">
+                <?php echo $tag->name;?>
+            </a>
+
+            
 
         <?php endforeach; ?>
 
