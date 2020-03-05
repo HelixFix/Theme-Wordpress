@@ -50,7 +50,7 @@ register_nav_menus(
 add_image_size('blog-large', 800, 400, false); // Forcer la dimenssion d'une image en gardants les proportions "scale"
 add_image_size('blog-small', 300, 200, true); // Forcer la dimenssion par recadrage d'une image  “hard crop”
 
-// Register Sidebars
+// Register Sidebars créations des options
 function my_sidebars() {
 
     register_sidebar(
@@ -59,7 +59,7 @@ function my_sidebars() {
             'name' => 'Page Sidebar',
             'id' => 'page-sidebar',
             'before_title' => '<h4 class="widget-title">',
-            'after_title' => '>/h4'
+            'after_title' => '</h4>'
         )
         );
 
@@ -69,7 +69,7 @@ function my_sidebars() {
             'name' => 'Blog  Sidebar',
             'id' => 'blog-sidebar',
             'before_title' => '<h4 class="widget-title">',
-            'after_title' => '>/h4'
+            'after_title' => '</h4>'
         )
         );
 
