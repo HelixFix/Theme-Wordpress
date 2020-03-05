@@ -53,7 +53,26 @@ add_image_size('blog-small', 300, 200, true); // Forcer la dimenssion par recadr
 // Register Sidebars
 function my_sidebars() {
 
+    register_sidebar(
 
+        array(
+            'name' => 'Page Sidebar',
+            'id' => 'page-sidebar',
+            'before_title' => '<h4 class="widget-title">',
+            'after_title' => '>/h4'
+        )
+        );
+
+    register_sidebar(
+
+        array(
+            'name' => 'Blog  Sidebar',
+            'id' => 'blog-sidebar',
+            'before_title' => '<h4 class="widget-title">',
+            'after_title' => '>/h4'
+        )
+        );
 
 }
+
 add_action('widgets_init', 'my_sidebars');
