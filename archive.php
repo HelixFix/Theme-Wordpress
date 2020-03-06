@@ -1,41 +1,48 @@
-<?php get_header();?>
+<?php get_header(); ?>
 
 <!--Template général-->
-<section class="page-wrap"><!--Ajoute de l'espace en haut et en bas-->
+<section class="page-wrap">
+	<!--Ajoute de l'espace en haut et en bas-->
 
-    <div class="container">
-        
-        <section class="row">
+	<div class="container">
 
-            <div class="col-lg-3">  
+		<section class="row">
 
-
-                <?php if (is_active_sidebar('page-sidebar') ):?><!--Si une sidebar est active-->
-            
-                <?php dynamic_sidebar('page-sidebar');?><!--Affiche la sidebar-->
-
-                <?php endif;?>
-
-            </div>
-
-            <div class="col-lg-9">
-
-                <h1><?php echo single_cat_title();?></h1><!--Affiche le nom de la catégorie sur la page-->
-                <!--<h1><?php the_title();?></h1>--> <!-- A mettre dans la boucle-->
-
-                <?php get_template_part('includes/section','archive');?> <!-- ceci==includes/section-content.php-->
-
-                <?php previous_posts_link();?> <!--Affiche lien suivant, ne pas oublier de definir le nombre d'article par page dans wordpress-->
-                <?php next_posts_link();?>
-
-             </div>
-
-        </section> 
-
-    </div>
-
-</section> 
+			<div class="col-lg-3">
 
 
+				<?php if (is_active_sidebar('blog-sidebar')) : ?>
+					<!--Si une sidebar est active-->
 
-<?php get_footer();?>
+					<?php dynamic_sidebar('blog-sidebar'); ?>
+					<!--Affiche la sidebar-->
+
+				<?php endif; ?>
+
+			</div>
+
+			<div class="col-lg-9">
+
+				<h1><?php echo single_cat_title(); ?></h1>
+				<!--Affiche le nom de la catégorie sur la page-->
+				<!--<h1><?php the_title(); ?></h1>-->
+				<!-- A mettre dans la boucle-->
+
+				<?php get_template_part('includes/section', 'archive'); ?>
+				<!-- ceci==includes/section-content.php-->
+
+				<?php previous_posts_link(); ?>
+				<!--Affiche lien suivant, ne pas oublier de definir le nombre d'article par page dans wordpress-->
+				<?php next_posts_link(); ?>
+
+			</div>
+
+		</section>
+
+	</div>
+
+</section>
+
+
+
+<?php get_footer(); ?>
