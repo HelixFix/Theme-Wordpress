@@ -14,8 +14,8 @@
 				<!--<h1><?php the_title(); ?></h1>-->
 				<!-- A mettre dans la boucle-->
 
-				<?php get_template_part('includes/section', 'archive'); ?>
-				<!-- ceci==includes/section-content.php-->
+				<?php get_template_part('includes/section', 'searchresults'); ?>
+				<!-- ceci==includes/section-searchresults.php, template pour les résultat de recherche-->
 
 				<?php previous_posts_link(); ?>
 				<!--Affiche lien suivant, ne pas oublier de definir le nombre d'article par page dans wordpress-->
