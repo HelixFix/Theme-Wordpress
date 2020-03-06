@@ -66,3 +66,25 @@ function my_sidebars()
 }
 
 add_action('widgets_init', 'my_sidebars');
+
+
+function my_first_post_type(){
+
+    $args = array(
+
+        'labels' => array(
+            'name' => 'Cars',
+            'singular_name' => 'Car',
+        ),// Ajoute un nouveau menu 'Cars' dans wordpress
+
+        'public' => true, // Si il est public
+        'has_archive' => true, // Si il à une archive
+        'supports' => array ('title', 'editor', 'thumbnail'),
+        //'rewrite' => array ('slug' => 'cars'),
+
+    );
+
+    register_post_type('cars', $args);
+
+}
+add_action('init', 'my_first_post_type');
