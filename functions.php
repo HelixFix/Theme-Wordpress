@@ -31,6 +31,7 @@ add_theme_support('widgets'); // Ajoute l'option "Widgets" dans Wordpress -> App
 register_nav_menus(
 
 	array(
+
 		'top-menu'  => 'Top Menu Location', // Ajoute l'option "Top Menu Location" dans Wordpress -> Apparence -> Menus
 		'mobile-menu'  => 'Mobile Menu Location', // Ajoute l'option "Mobile Menu Location" dans Wordpress -> Apparence -> Menus
 		'footer-menu'  => 'Footer Menu Location', // Ajoute l'option "Footer Menu Location" dans Wordpress -> Apparence -> Menus
@@ -38,15 +39,16 @@ register_nav_menus(
 );
 
 // Custom Image Sizes
-add_image_size('blog-large', 800, 400, false); // Forcer la dimenssion d'une image en gardants les proportions "scale"
-add_image_size('blog-small', 300, 200, true); // Forcer la dimenssion par recadrage d'une image  “hard crop”
+add_image_size('blog-large', 800, 400, false); // Forcer la dimension d'une image en gardants les proportions "scale"
+add_image_size('blog-small', 300, 200, true); // Forcer la dimension par recadrage d'une image  “hard crop”
 
 // Register Sidebars créations des options
-function my_sidebars()
-{
+function my_sidebars(){
+
 	register_sidebar(
 
 		array(
+
 			'name' => 'Page Sidebar',
 			'id' => 'page-sidebar',
 			'before_title' => '<h3 class="widget-title">',
@@ -57,6 +59,7 @@ function my_sidebars()
 	register_sidebar(
 
 		array(
+
 			'name' => 'Blog  Sidebar',
 			'id' => 'blog-sidebar',
 			'before_title' => '<h3 class="widget-title">',
@@ -73,12 +76,15 @@ function my_first_post_type(){
     $args = array(
 
         'labels' => array(
+
             'name' => 'Cars',
             'singular_name' => 'Car',
         ),// Ajoute un nouveau menu 'Cars' dans wordpress
 
+        'hierarchical' => true, // Si true considérer comme une page=statique, si false considérer comme un article
         'public' => true, // Si il est public
         'has_archive' => true, // Si il à une archive
+        'menu_icon' => 'dashicons-cart', // Wordpress dashicons
         'supports' => array ('title', 'editor', 'thumbnail'),
         //'rewrite' => array ('slug' => 'cars'),
 
@@ -87,4 +93,24 @@ function my_first_post_type(){
     register_post_type('cars', $args);
 
 }
+
 add_action('init', 'my_first_post_type');
+
+function my_first_taxonomy(){
+
+    $args = array(
+
+        'labels' => array(
+
+            'name' => 'Brands',
+            'singular_name' => 'Brand',
+        ),// Ajoute un nouveau menu 'Cars' dans wordpress
+
+        'public' => true,
+        'hierarchical' => false, // Si true considérer comme une page=statique, si false considérer comme un article
+    );
+
+    register_taxonomy('brands', array('cars'), $args);
+}// Création d'un Tag 'Brands'
+
+add_action('init', 'my_first_taxonomy');
