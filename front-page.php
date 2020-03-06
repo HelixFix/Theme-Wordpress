@@ -1,16 +1,18 @@
-<?php get_header('');?>
-
+<?php get_header(''); ?>
 
 <section class="page-wrap"><!--Ajoute de l'espace en haut et en bas-->
-    <!--Template général-->
-    <div class="container">
 
-        <h1><?php the_title();?></h1>
+	<!--Template général-->
+	<div class="container">
 
-        <?php get_template_part('includes/section', 'content');?> <!-- ceci==includes/section-content.php-->
-    </div>
+		<h1><?php the_title(); ?></h1>
+
+		<?php get_template_part('includes/section', 'content'); ?><!-- ceci==includes/section-content.php-->
+
+		<?php get_search_form();?><!--Inserer une barre de recherche-->
+
+	</div>
+
 </section>
 
-
-
-<?php get_footer();?>
+<?php get_footer(); ?>

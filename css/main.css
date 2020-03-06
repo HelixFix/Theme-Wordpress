@@ -10,7 +10,6 @@ header {
 	padding: 0;
 }
 
-
 .page-wrap {
 	padding: 2rem 0;
 }
@@ -41,7 +40,6 @@ header .container {
 	align-items: center;
 	height: 100%;
 }
-
 
 header .top-bar li:first-child a {
 	padding-left: 0;
@@ -89,7 +87,6 @@ header .top-bar li .sub-menu a:hover {
 header .top-bar>.menu-item-has-children:hover>.sub-menu {
 	display: block;
 }
-
 
 header .top-bar>.sub-menu>li>.menu-item-has-children:hover .sub-menu {
 	display: block;
