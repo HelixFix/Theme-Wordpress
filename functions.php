@@ -85,7 +85,7 @@ function my_first_post_type(){
         'public' => true, // Si il est public
         'has_archive' => true, // Si il à une archive
         'menu_icon' => 'dashicons-cart', // Wordpress dashicons
-        'supports' => array ('title', 'editor', 'thumbnail'),
+        'supports' => array ('title', 'editor', 'thumbnail'), //Ajoute la possibilité d'édit le titre et le contenu depuis wordpress
         //'rewrite' => array ('slug' => 'cars'),
 
     );
