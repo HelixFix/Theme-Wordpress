@@ -19,7 +19,11 @@
         </p>
 
         <?php
+
         $tags = get_the_tags();
+
+        if($tags):
+
         foreach ($tags as $tag) : ?><!--Boucle pour chaque contenu qui possède un tag-->
 
 
@@ -30,15 +34,17 @@
 
             
 
-        <?php endforeach; ?>
-
+        <?php endforeach; endif; ?>
 
         <?php
+
         $categories = get_the_category();
+
         foreach($categories as $cat) : ?><!--Boucle pour chaque contenu qui possède une catégorie-->
                 <a href="<?php echo get_category_link($cat->term_id);?>"> <!--Lien clickable + mise en forme bouton catégorie-->
                 <?php echo $cat->name;?><!--Faire apparaitre nom de la catégorie-->
                 </a>
+
         <?php endforeach; ?>
 
         <?php comments_template();?><!--Affiche emplacement de commmentaire-->
