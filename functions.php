@@ -113,4 +113,4 @@ function my_first_taxonomy(){
     register_taxonomy('brands', array('cars'), $args);
 }// Création d'un Tag 'Brands'
 
-add_action('init', 'my_first_taxonomy');
+add_action('init', 'my_first_taxonomy'); 

@@ -7,4 +7,4 @@
 
 	<button type="submit">Recherche!</button>
 
-</form>
+</form> 
