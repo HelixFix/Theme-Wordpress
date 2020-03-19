@@ -4,7 +4,7 @@
 
 			<div class="card-body d-flex justify-content-center align-items-center">
 
-				<?php if (has_post_thumbnail) : ?><!--Si possède une image-->
+				<?php if (has_post_thumbnail()) : ?><!--Si possède une image-->
 
 					<img src="<?php the_post_thumbnail_url('blog-small'); ?>" alt="<?php the_title(); ?>" class="img-fluid mb-3 img-thumbnail  mr-4"><!--Affiche l'image-->
 
