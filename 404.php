@@ -1,3 +1,4 @@
+<?php get_header(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,3 +40,4 @@
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
 </html>
+<?php get_footer(); ?> 
