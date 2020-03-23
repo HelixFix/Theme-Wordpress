@@ -114,3 +114,4 @@ function my_first_taxonomy(){
 }// Création d'un Tag 'Brands'
 
 add_action('init', 'my_first_taxonomy'); 
+

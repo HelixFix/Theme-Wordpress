@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header(); ?> <!-- Sans ça pas de CSS -->
 <!DOCTYPE html>
 <html lang="en">
 
