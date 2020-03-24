@@ -1,6 +1,11 @@
 <?php
 
 add_theme_support('title-tag'); //Ajoute un title automatiquement
+add_filter('wp_title', 'montheme_title'); // Filtre - title
+
+function montheme_title ($title) {
+	return 'The〈div〉vision 68';
+}
 
 // Load Stylesheets
 function load_css()
