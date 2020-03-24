@@ -1,11 +1,24 @@
 <?php
 
-add_theme_support('title-tag'); //Ajoute un title automatiquement
-add_filter('wp_title', 'montheme_title'); // Filtre - title
+function montheme_supports () {
+	add_theme_support('title-tag');
+}
 
 function montheme_title ($title) {
-	return 'The〈div〉vision 68';
+	return 'test' . $title;
 }
+
+function montheme_title_separator () {
+	return '|';
+}
+
+
+// add_theme_support('title-tag'); //Ajoute un title automatiquement
+add_action('after_setup_theme', 'montheme_supports');
+add_filter('wp_title', 'montheme_title'); // Filtre - title
+add_filter('document_title_separator', 'montheme_title_separator'); // Change le séparateur dans le title
+
+
 
 // Load Stylesheets
 function load_css()
