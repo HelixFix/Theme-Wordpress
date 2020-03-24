@@ -1,5 +1,7 @@
 <?php
 
+add_theme_support('title-tag'); //Ajoute un title automatiquement
+
 // Load Stylesheets
 function load_css()
 {
