@@ -9,7 +9,7 @@ function montheme_title ($title) {
 }
 
 function montheme_title_separator () {
-	return '|';
+	return '/><';
 }
 
 
