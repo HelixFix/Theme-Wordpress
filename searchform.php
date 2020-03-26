@@ -9,7 +9,7 @@
 
 </form>  -->
 
-<form class="form-inline my-2 my-lg-0" action="<?php esc_url(home_url('/')) ?>">
+<form class="form-inline my-2 my-lg-0" action="https://jeromer401.promo-36.codeur.online/Wordpress/">
 
 	<input class="form-control mr-sm-2" name="s" type="search" placeholder="Recherche" aria-label="Search" value="<?php get_search_query() ?>">
 
