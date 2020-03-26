@@ -5,7 +5,7 @@ function montheme_supports () {
 }
 
 function montheme_title ($title) {
-	return 'test' . $title;
+	return 'The〈div〉vision 68' . $title;
 }
 
 function montheme_title_separator () {
